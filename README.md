@@ -3,21 +3,22 @@
 
 ## How to run the code
 
-1. Create a virtual environment and activate it
+1. build docker
 
 ```bash
-python -m venv venv
+docker build -t myimage .
 ```
 
-2. Install the requirements
+2. Run the code
 
 ```bash
-pip install -r requirements.txt
- ```
-
-3. Run the code
-
-```bash
-python main.py
+docker run -p 8080:8080 myimage
 ```
 
+3. use service
+
+    Go to your running service http://127.0.0.1:8080/docs#/default/segment_image_segment_image_post
+
+    upload the image from resources and get the results from the API :D
+
+    enjoy
